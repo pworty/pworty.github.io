@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    overflow-y: hidden;
+}
+
+main {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.img_container {
+    margin-top: 169px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.img_container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: opacity(18%);
+    z-index: 1;
+}
+
+h1 {
+    width: 100%;
+    position: absolute;
+    margin-top: 150px;
+    text-align: center;
+    font-weight: 600;
+    cursor: default;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+main p {
+    width: 100%;
+    position: absolute;
+    margin-top: 230px;
+    text-align: center;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 20px;
+
+}
+
+main p a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+main p a:hover {
+    color: #145c7a;
+}
+
+@media (max-width: 630px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    main p {
+        font-size: 0.9em;
+    }
+}

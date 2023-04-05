@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;600&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, white, rgba(0, 128, 0, 0.137), white);
+}
+
+/* BACKGROUND */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+/* FORM */
+
+.form {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 50px;
+}
+
+h1 {
+    position: relative;
+    color: black;
+    font-size: 1.6em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 30px
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 90%;
+    height: 2px;
+    background-color: black;
+}
+
+form input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.055);
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1em;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+form input::placeholder {
+    color: rgba(0, 0, 0, 0.61);
+}
+
+form input[type="submit"] {
+    background-color: rgb(47, 218, 47);
+    color: #ffffff;
+    max-width: 100px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.forget,
+.create {
+    color: black;
+    padding-top: 20px;
+}
+
+.forget a,
+.create a {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (max-width:700px) {
+    .container .square {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .form {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width:480px) {
+    .container {
+        font-size: 0.9em;
+    }
+
+    .form {
+        padding: 30px;
+    }
+}
+
+/* SQUARES */
+
+.container {
+    position: relative;
+}
+
+.container .square {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: animate_squares 8s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes animate_squares {
+
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+.container .square:nth-child(1) {
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+.container .square:nth-child(2) {
+    top: 150px;
+    left: -85px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+
+}
+
+.container .square:nth-child(3) {
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+
+.container .square:nth-child(4) {
+    bottom: -80px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+.container .square:nth-child(5) {
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}

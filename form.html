@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправить форму</title>
+    <link rel="stylesheet" href="nav-footer.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <header>
+
+        <nav id="top-menu">
+
+            <a href="index.html">
+                <img src="data/images/logo.jpg" id="logo">
+            </a>
+
+            <div id="burger">
+                <span></span>
+
+            </div>
+
+            <ul id="menu-list">
+
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="houses.html">Дома в управлении</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="lk.html">Личный кабинет</a></li>
+
+            </ul>
+
+            <script src="burger.js"></script>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+        <h1>Форма обратной связи</h1>
+        <form action="form_completed.html" method="post">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="FIO">ФИО</label>
+                <input type="FIO" name="FIO" id="FIO" required>
+            </div>
+            <div>
+                <label for="tel">Телефон</label>
+                <input type="tel" name="tel" id="tel" required>
+            </div>
+            <div>
+                <label for="textarea">Сообщение</label>
+                <textarea id="textarea" name="textarea" minlength="1" maxlength="1000" required></textarea>
+            </div>
+
+            <input type="submit" value="Отправить">
+
+        </form>
+
+        <div class="img_container">
+            <img src="data/images/form.jpg">
+        </div>
+
+    </main>
+
+</body>
+
+</html>
